@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#myDIV {
+  width: px;
+  height: 1080px;
+  background-color: rgb(255, 255, 255);
+  color: white;
+}
+
+</style>
+</head>
+<body>
+
+<button onclick="yellow()">Yellow</button>
+<button onclick="red()">Red</button>
+<button onclick="green()">Green</button>
+
+<div id="myDIV">
+</div>
+
+<script>
+function yellow() {
+  document.getElementById("myDIV").style.backgroundColor = "yellow";
+}
+function red() {
+  document.getElementById("myDIV").style.backgroundColor = "red";
+}
+function green() {
+  document.getElementById("myDIV").style.backgroundColor = "green";
+}
+</script>
+
+</body>
+</html>
