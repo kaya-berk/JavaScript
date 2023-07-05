@@ -1,36 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style> 
-#myDIV {
-  width: px;
-  height: 1080px;
-  background-color: rgb(255, 255, 255);
-  color: white;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arka Plan Renk Değiştirme</title>
+  <style>
+  #container {
+    margin: auto;
+    height: 1080px;
+    width: 1920px;
 }
 
+#button {
+    width: 250px;
+    height: 50px;
+}
 </style>
 </head>
 <body>
-
-<button onclick="yellow()">Yellow</button>
-<button onclick="red()">Red</button>
-<button onclick="green()">Green</button>
-
-<div id="myDIV">
-</div>
+  <div id="container">
+  </div>
+  <button id="button">Renk Değiştirme</button>
 
 <script>
-function yellow() {
-  document.getElementById("myDIV").style.backgroundColor = "yellow";
-}
-function red() {
-  document.getElementById("myDIV").style.backgroundColor = "red";
-}
-function green() {
-  document.getElementById("myDIV").style.backgroundColor = "green";
-}
+  
+  let colors = ['blue', 'yellow', 'black', 'red', 'brown', 'orange'];
+  let button = document.getElementById('button');
+  button.addEventListener('click', function(){
+      var randomColor = colors[Math.floor(Math.random() * colors.length)]
+      //get container
+      let container = document.getElementById('container');
+
+      container.style.background = randomColor;
+  })
+
 </script>
 
 </body>
 </html>
+
+
